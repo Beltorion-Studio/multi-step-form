@@ -1,0 +1,401 @@
+*,
+*::before,
+*::after {
+ box-sizing: border-box;
+}
+
+/* Global styles*/
+.msf-container {
+ /* global styles */
+/*
+ --primary: hsl(212, 100%, 34%);
+ --primary-hover: hsl(212, 99%, 38%);
+ --font-family: "Poppins", sans-serif;
+*/
+ /* realnetwork styles */
+
+ 
+  --primary: hsl(202 100% 41%);
+  --primary-hover: hsl(202 100% 35%);
+  --font-family: 'DM Sans', sans-serif;
+  
+
+ --font-size: 18px;
+}
+
+.ml-auto {
+ margin-left: auto;
+}
+
+.text-center {
+ text-align: center;
+}
+
+.msf-container {
+ width: 1352px;
+ margin: auto;
+ display: flex;
+ flex-direction: column;
+ align-items: center; /* Vertical */
+ justify-content: center; /* Horizontal */
+}
+
+.progress-bar-container {
+ height: 8px;
+ width: 1325px;
+ margin: 40px 0 60px;
+ background-color: hsl(212, 85%, 89%);
+}
+
+#progress {
+ background-color: var(--primary);
+ width: 0%;
+ height: 100%;
+ border-radius: 6px;
+ transition: 0.4s ease-in-out;
+}
+
+form {
+ width: 800px;
+ padding: 80px 100px 100px 80px;
+ background-color: #fff;
+ box-shadow: 0 0 20px rgba(119, 119, 119, 0.8);
+ border-radius: 5px;
+}
+
+.form-step {
+ display: none;
+ animation: change 2s ease-in-out;
+}
+
+.form-step-active {
+ display: flex;
+ flex-direction: column;
+ width: 100%;
+ opacity: 1;
+
+ align-items: center; /* Vertical */
+ position: relative;
+}
+
+@keyframes change {
+ from {
+  transform: translateY(20px);
+  opacity: 0;
+ }
+ to {
+  transform: translateY(0);
+  opacity: 1;
+ }
+}
+
+.msf-heading {
+ color: var(--primary);
+ font-size: 28px;
+ line-height: 1.3;
+ text-align: center;
+ margin: 0 0 20px 0;
+}
+
+.msf-btn {
+ background: var(--primary);
+ color: #ffffff;
+ margin-top: 40px;
+ border-radius: 5px;
+ border: none;
+ padding: 16px 40px;
+ font-size: 16px;
+ font-weight: 500;
+ box-shadow: 2px 2px 3px 1px rgb(0 0 0 / 40%),
+  inset 0 200px 200px 200px transparent;
+ text-decoration: none;
+ text-align: center;
+ transition: 0.5s ease-in-out;
+
+ min-width: 76px;
+ padding: 0.95em 40px;
+ line-height: normal;
+}
+
+.msf-btn:hover {
+ padding-left: 44px;
+ padding-right: 44px;
+ background-color: var(--primary-hover);
+ text-align: center;
+}
+
+.hide {
+ display: none;
+}
+
+.btns-group {
+ margin-top: 20px;
+ display: flex;
+ gap: 1.5rem;
+ justify-content: space-between;
+ position: absolute;
+ right: -80px;
+ bottom: -80px;
+ color: var(--primary);
+ font-weight: normal;
+}
+
+.arrow {
+ display: flex;
+ color: var(--primary);
+ transition: transform 0.3s ease-in-out;
+}
+
+.arrow:hover {
+ transform: translateX(-4px);
+}
+
+.right:hover {
+ transform: translateX(4px);
+}
+
+.inactive {
+ opacity: 0.3;
+}
+/* The radio-btn-label */
+.radio-btn-label {
+ color: white;
+ display: block;
+ position: relative;
+ padding: 20px 0;
+ margin-bottom: 12px;
+ cursor: pointer;
+ font-size: 14px;
+ -webkit-user-select: none;
+ -moz-user-select: none;
+ -ms-user-select: none;
+ user-select: none;
+ background-color: var(--primary);
+ width: 400px;
+ text-align: center;
+ border-radius: 6px;
+ box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.25);
+}
+
+.radio-btn-label::after {
+ content: "";
+ transition: 0.3s ease-in-out;
+}
+
+.radio-btn-label:hover::after {
+ content: "";
+ position: absolute;
+ left: 0;
+ top: 0;
+ width: 100%;
+ height: 100%;
+ background-color: hsl(0, 0%, 100%, 0.15);
+}
+
+/* Hide the browser's default radio button */
+.radio-btn-label input {
+ position: absolute;
+ opacity: 0;
+ cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+ position: absolute;
+ top: 50%;
+ right: 20px;
+ transform: translateY(-50%);
+ height: 30px;
+ width: 30px;
+ background-color: var(--primary);
+}
+
+/* .checkmark:hover{
+   background-color: var(--primary-hover); 
+
+} */
+
+/* When the radio button is checked, add a blue background */
+.radio-btn-label input:checked ~ .checkmark {
+ background-color: rgb(255, 255, 255);
+ border-radius: 50%;
+ height: 30px;
+ width: 30px;
+ transition-property: background-color;
+ transition-timing-function: ease-in-out;
+ transition-duration: 1s;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+ content: "";
+ position: absolute;
+ display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio-btn-label input:checked ~ .checkmark:after {
+ display: block;
+ transition-delay: 2s;
+ /* animation: change 2s ease-in-out;  */
+}
+
+/* Style the indicator (dot/circle) */
+.radio-btn-label .checkmark:after {
+ position: absolute;
+ border-radius: 50%;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ background: white;
+ width: 26px;
+ height: 26px;
+ border: solid 3px var(--primary);
+ border-radius: 50px;
+}
+
+.msf-text-input {
+ padding: 12px 12px;
+ width: 400px;
+ margin-top: 10px;
+ border: 2px solid;
+ border-color: var(--primary);
+ border-radius: 5px;
+ outline: none;
+ font-size: 16px;
+}
+
+.msf-text-input:focus {
+ border-color: var(--primary);
+}
+
+.msf-slider {
+ margin: 40px 0px;
+ width: 400px;
+}
+
+input[type="range"] {
+ -webkit-appearance: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+ height: 12px;
+ background: var(--primary);
+ border: none;
+ border-radius: 5px;
+}
+
+input[type="range"]::-moz-range-track {
+ height: 12px;
+ background: var(--primary);
+ border: none;
+ border-radius: 5px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+ -webkit-appearance: none;
+ border: none;
+ height: 32px;
+ width: 32px;
+ border-radius: 50%;
+ background: var(--primary);
+ margin-top: -10px;
+ cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+ border: none;
+ height: 32px;
+ width: 32px;
+ border-radius: 50%;
+ background: var(--primary);
+ margin-top: -10px;
+ cursor: pointer;
+}
+
+input[type="range"]:focus {
+ outline: none;
+}
+
+input[type="range"]:focus::-webkit-slider-runnable-track {
+ background: var(--primary);
+}
+
+.slider-value {
+ margin-top: -20px;
+ margin-bottom: 20px;
+ color: var(--primary);
+ font-weight: bold;
+ font-size: 20px;
+}
+
+@media only screen and (max-width: 800px) {
+ /* [325px -> 600px]*/
+
+ .msf-container {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Vertical */
+  justify-content: center; /* Horizontal */
+ }
+
+ form {
+  max-width: 300px;
+  width: 98%;
+  padding: 5%;
+ }
+
+ .progress-bar-container {
+  max-width: 300px;
+  width: 98%;
+  margin: 40px 0 0 0;
+ }
+
+ .msf-heading {
+  font-size: 20px;
+ }
+ .msf-btn {
+  width: 100%;
+  margin-top: 20px;
+ }
+
+ .btns-group {
+  width: 100%;
+  position: relative;
+  right: 0px;
+  bottom: 0px;
+ }
+
+ .radio-btn {
+  width: 100%;
+ }
+
+ .radio-btn-label {
+  width: 100%;
+  text-align: left;
+  padding-left: 32px;
+ }
+
+ .msf-text-input {
+  padding: 12px 12px;
+  width: 100%;
+  margin-top: 10px;
+  border: 2px solid;
+  border-color: var(--primary);
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+ }
+
+ .msf-slider {
+  margin: 40px 0px;
+  width: 100%;
+ }
+
+ .checkmark {
+  top: 50%;
+  right: 12px;
+ }
+}
