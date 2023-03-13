@@ -1,245 +1,459 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/form.css" />
+    <title>Multi step form</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/form.css">
-  <title>Multi step form</title>
-</head>
-
-<body>
-  <div class="msf-container">
-    <!-- Progress bar -->
-    <div class="progress-bar-container">
-      <div id="progress">
-
+  <body>
+    <div class="msf-container">
+      <!-- Progress bar -->
+      <div class="progress-bar-container">
+        <div id="progress"></div>
       </div>
-    </div>
-    <form action="https://usebasin.com/f/5d3613837108" method="POST">
-
-
-
-      <!-- question 1-->
-      <div class="form-step form-step-active">
-        <h3 class="msf-heading">How many total computer workstations and laptops do you currently have?</h3>
-
-        <input class="msf-slider" type="range" min="1" max="300" step="1" value="0" id="slider"
-          name="How many total computer workstations and laptops do you currently have?">
-        <div class="slider-value" id="selectValue1">0</div>
-        <a href="#" class="msf-next-btn msf-btn">Next</a>
-        <div class="btns-group">
-          <div class="arrow inactive">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="currentcolor">
-              <path d="M0 0h24v24H0V0z" fill="none" opacity=".87" />
-              <path d="M17.51 3.87L15.73 2.1 5.84 12l9.9 9.9 1.77-1.77L9.38 12l8.13-8.13z" />
-            </svg>
+      <form action="https://usebasin.com/f/5d3613837108" method="POST">
+        <!-- question 1-->
+        <div class="form-step form-step-active">
+          <div class="questions">
+            <div class="number">
+              <p>1</p>
+            </div>
+            <h3 class="msf-heading">What do you need help with?</h3>
           </div>
-          <div class="form-step-counter"></div>
-          <a href="#" class="msf-next-btn">
-            <div class="arrow right">
-              <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px"
-                viewBox="0 0 24 24" width="24px" fill="currentcolor">
+
+          <div class="questioncard-wrapper">
+            <div class="questioncard">
+              <input
+                class="questioncard-text"
+                type="radio"
+                name="card"
+                id="itservices"
+              />
+              <label for="itservices"></label>
+              <img
+                class="questioncard-icons"
+                src="./public/img/service.png"
+                alt="computer"
+              />
+              <div class="questioncard-subtitle-W">
+                <span class="questioncard-letter">A</span>
+                <span class="questioncard-subtitle">IT Services</span>
+              </div>
+            </div>
+            <div class="questioncard">
+              <input
+                class="questioncard-text"
+                type="radio"
+                name="card"
+                id="softwaredevelopment"
+              />
+              <label for="softwaredevelopment"></label>
+              <img
+                class="questioncard-icons"
+                src="./public/img/develops.png"
+                alt="develops"
+              />
+              <div class="questioncard-subtitle-W">
+                <span class="questioncard-letter">B</span>
+                <span class="questioncard-subtitle">Software Development</span>
+              </div>
+            </div>
+            <div class="questioncard">
+              <input
+                class="questioncard-text"
+                type="radio"
+                name="card"
+                id="network"
+              />
+              <label for="network"></label>
+              <img
+                class="questioncard-icons"
+                src="./public/img/network.png"
+                alt="cloud service"
+              />
+              <div class="questioncard-subtitle-W">
+                <span class="questioncard-letter">C</span>
+                <span class="questioncard-subtitle">
+                  Network or Cloud Services</span
+                >
+              </div>
+            </div>
+            <div class="questioncard">
+              <input
+                class="questioncard-text"
+                type="radio"
+                name="card"
+                id="else"
+              />
+              <label for="else"></label>
+              <img
+                class="questioncard-icons"
+                src="./public/img/else.png"
+                alt="magnifying glass"
+              />
+              <div class="questioncard-subtitle-W">
+                <span class="questioncard-letter">D</span>
+                <span class="questioncard-subtitle"> Something Else</span>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="msf-next-btn msf-btn"
+            >OK
+            <svg class="tickmark" height="13" width="16">
+              <path
+                fill="white"
+                d="M14.293.293l1.414 1.414L5 12.414.293 7.707l1.414-1.414L5 9.586z"
+              ></path></svg
+          ></a>
+          <div class="btns-group">
+            <div class="arrow inactive">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 0 24 24"
+                width="24px"
+                fill="currentcolor"
+              >
+                <path d="M0 0h24v24H0V0z" fill="none" opacity=".87" />
+                <path
+                  d="M17.51 3.87L15.73 2.1 5.84 12l9.9 9.9 1.77-1.77L9.38 12l8.13-8.13z"
+                />
+              </svg>
+            </div>
+            <div class="form-step-counter"></div>
+            <a href="#" class="msf-next-btn">
+              <div class="arrow right">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  enable-background="new 0 0 24 24"
+                  height="24px"
+                  viewBox="0 0 24 24"
+                  width="24px"
+                  fill="currentcolor"
+                >
+                  <g>
+                    <path d="M0,0h24v24H0V0z" fill="none" />
+                  </g>
+                  <g>
+                    <polygon
+                      points="6.23,20.23 8,22 18,12 8,2 6.23,3.77 14.46,12"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- question 2-->
+        <div class="form-step">
+          <div class="questions">
+            <div class="number">
+              <p>2</p>
+            </div>
+            <h3 class="msf-heading">
+              How many people are in your organisation?
+            </h3>
+          </div>
+          <input
+            class="fill-text"
+            type="text"
+            placeholder="Type your answer here..."
+          />
+          <div class="btnOKenter">
+            <a href="#" class="msf-next-btn msf-btn"
+              >OK
+              <svg class="tickmark" height="13" width="16">
+                <path
+                  fill="white"
+                  d="M14.293.293l1.414 1.414L5 12.414.293 7.707l1.414-1.414L5 9.586z"
+                ></path>
+              </svg>
+            </a>
+            <p class="PressEnter">Press <strong>Enter</strong> ↵</p>
+          </div>
+          <div class="btns-group"></div>
+        </div>
+
+        <!-- question 3-->
+        <div class="form-step">
+          <div class="questions">
+            <div class="number">
+              <p>3</p>
+            </div>
+            <h3 class="msf-heading">Your website URL?</h3>
+          </div>
+          <input class="fill-text" type="text" placeholder="https://" />
+          <div class="btnOKenter">
+            <a href="#" class="msf-next-btn msf-btn"
+              >OK
+              <svg class="tickmark" height="13" width="16">
+                <path
+                  fill="white"
+                  d="M14.293.293l1.414 1.414L5 12.414.293 7.707l1.414-1.414L5 9.586z"
+                ></path>
+              </svg>
+            </a>
+            <p class="PressEnter">Press <strong>Enter</strong> ↵</p>
+          </div>
+          <div class="btns-group"></div>
+        </div>
+
+        <!-- question 4-->
+        <div class="form-step">
+          <div class="questions">
+            <div class="number">
+              <p>4</p>
+            </div>
+            <h3 class="msf-heading">Describe your needs in a few lines</h3>
+          </div>
+
+          <textarea
+            class="fill-text"
+            placeholder="Type your answer here..."
+            rows="1"
+            style="overflow-x: hidden; overflow-wrap: break-word; height: 46px"
+          >
+ Type your answer here...
+          </textarea>
+          <p class="ShiftEnter">
+            <strong>Shift</strong> ⇧ + <strong>Enter</strong> ↵ to make a line
+            break
+          </p>
+          <div class="btnOKenter">
+            <a href="#" class="msf-next-btn msf-btn"
+              >OK
+              <svg class="tickmark" height="13" width="16">
+                <path
+                  fill="white"
+                  d="M14.293.293l1.414 1.414L5 12.414.293 7.707l1.414-1.414L5 9.586z"
+                ></path>
+              </svg>
+            </a>
+            <p class="PressEnter">Press <strong>Enter</strong> ↵</p>
+          </div>
+          <div class="btns-group"></div>
+        </div>
+
+        <!-- question 5-->
+        <div class="form-step">
+          <div class="questions">
+            <div class="number">
+              <p>5</p>
+            </div>
+            <h3 class="msf-heading">What is most important to you?</h3>
+          </div>
+          <div class="questioncard-wrapper">
+            <div class="questioncard">
+              <img
+                class="questioncard-icons"
+                src="./public/img/price.png"
+                alt="price-tag"
+              />
+              <div class="questioncard-subtitle-W">
+                <div class="questioncard-letter">
+                  <p>A</p>
+                </div>
+                <input
+                  class="questioncard-text"
+                  type="radio"
+                  name="card"
+                  id="itservices"
+                />
+                <label for="itservices">Low Price</label>
+              </div>
+            </div>
+            <div class="questioncard">
+              <img
+                class="questioncard-icons"
+                src="./public/img/quality.png"
+                alt="badge"
+              />
+              <div class="questioncard-subtitle-W">
+                <div class="questioncard-letter">
+                  <p>B</p>
+                </div>
+                <input
+                  class="questioncard-text"
+                  type="radio"
+                  name="card"
+                  id="softwaredevelopment"
+                />
+                <label for="itservices">Good Service</label>
+              </div>
+            </div>
+            <div class="questioncard">
+              <img
+                class="questioncard-icons"
+                src="./public/img/quick.png"
+                alt="clock"
+              />
+              <div class="questioncard-subtitle-W">
+                <div class="questioncard-letter">
+                  <p>C</p>
+                </div>
+                <input
+                  class="questioncard-text"
+                  type="radio"
+                  name="card"
+                  id="network"
+                />
+                <label for="itservices">Quick Solution</label>
+              </div>
+            </div>
+            <div class="questioncard">
+              <img
+                class="questioncard-icons"
+                src="./public/img/list.png"
+                alt="clipboard"
+              />
+              <div class="questioncard-subtitle-W">
+                <div class="questioncard-letter">
+                  <p>D</p>
+                </div>
+                <input
+                  class="questioncard-text"
+                  type="radio"
+                  name="card"
+                  id="else"
+                />
+                <label for="itservices">All of The Above</label>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="msf-next-btn msf-btn"
+            >OK
+            <svg class="tickmark" height="13" width="16">
+              <path
+                fill="white"
+                d="M14.293.293l1.414 1.414L5 12.414.293 7.707l1.414-1.414L5 9.586z"
+              ></path></svg
+          ></a>
+          <div class="btns-group"></div>
+        </div>
+
+        <!-- question 6-->
+        <div class="form-step">
+          <div class="questions">
+            <div class="number">
+              <p>6</p>
+            </div>
+            <h3 class="msf-heading">What's your name?</h3>
+          </div>
+          <input
+            class="fill-text"
+            type="text"
+            placeholder="Type your answer here..."
+          />
+          <div class="btnOKenter">
+            <a href="#" class="msf-next-btn msf-btn"
+              >OK
+              <svg class="tickmark" height="13" width="16">
+                <path
+                  fill="white"
+                  d="M14.293.293l1.414 1.414L5 12.414.293 7.707l1.414-1.414L5 9.586z"
+                ></path>
+              </svg>
+            </a>
+            <p class="PressEnter">Press <strong>Enter</strong> ↵</p>
+          </div>
+          <div class="btns-group"></div>
+        </div>
+
+        <!-- question 7-->
+        <div class="form-step">
+          <div class="questions">
+            <div class="number">
+              <p>7</p>
+            </div>
+            <h3 class="msf-heading">What's your email?</h3>
+          </div>
+          <input class="fill-text" type="text" placeholder="name@example.com" />
+          <div class="btnOKenter">
+            <a href="#" class="msf-next-btn msf-btn"
+              >OK
+              <svg class="tickmark" height="13" width="16">
+                <path
+                  fill="white"
+                  d="M14.293.293l1.414 1.414L5 12.414.293 7.707l1.414-1.414L5 9.586z"
+                ></path>
+              </svg>
+            </a>
+            <p class="PressEnter">Press <strong>Enter</strong> ↵</p>
+          </div>
+          <div class="btns-group"></div>
+        </div>
+
+        <!-- question 8-->
+        <div class="form-step">
+          <div class="questions">
+            <div class="number">
+              <p>8</p>
+            </div>
+            <h3 class="msf-heading">Final Step: get your quick quote*</h3>
+            <p>We will send you a PIN code through SMS to verify your phone</p>
+          </div>
+          <input class="fill-text" type="text" placeholder="0412 345 678" />
+          <a href="#" class="msf-next-btn msf-btn">Submit </a>
+          <div class="btns-group"></div>
+        </div>
+
+        <!-- verify-->
+        <div class="form-step">
+          <h3 class="msf-heading">Verify your phone number</h3>
+          <input
+            class="fill-text"
+            type="text"
+            placeholder="Type the SMS code here..."
+          />
+          <div class="btnOKenter">
+            <a href="#" class="msf-next-btn msf-btn">Submit</a>
+            <p class="PressEnter">Press <strong>Enter</strong> ↵</p>
+          </div>
+          <div class="btns-group">
+            <a href="#" class="msf-btn-prev">
+              <div class="arrow">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 0 24 24"
+                  width="24px"
+                  fill="currentcolor"
+                >
+                  <path d="M0 0h24v24H0V0z" fill="none" opacity=".87" />
+                  <path
+                    d="M17.51 3.87L15.73 2.1 5.84 12l9.9 9.9 1.77-1.77L9.38 12l8.13-8.13z"
+                  />
+                </svg>
+              </div>
+            </a>
+            <div class="form-step-counter"></div>
+            <div class="arrow inactive">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                enable-background="new 0 0 24 24"
+                height="24px"
+                viewBox="0 0 24 24"
+                width="24px"
+                fill="currentcolor"
+              >
                 <g>
                   <path d="M0,0h24v24H0V0z" fill="none" />
                 </g>
                 <g>
-                  <polygon points="6.23,20.23 8,22 18,12 8,2 6.23,3.77 14.46,12" />
+                  <polygon
+                    points="6.23,20.23 8,22 18,12 8,2 6.23,3.77 14.46,12"
+                  />
                 </g>
               </svg>
             </div>
-          </a>
-        </div>
-      </div>
-
-      <!-- question 2-->
-      <div class="form-step">
-        <h3 class="msf-heading">Do you have any server systems?</h3>
-        <input class="msf-slider" type="range" min="1" max="20" value="0" name="Do you have any server systems?">
-        <div>
-          <div class="slider-value" id="selectValue2">0</div>
-        </div>
-        <a href="#" class="msf-next-btn msf-btn">Next</a>
-        <div class="btns-group">
-        </div>
-      </div>
-
-      <!-- question 3-->
-      <div class="form-step">
-        <h3 class="msf-heading">How many physical office locations do you have?</h3>
-        <input class="msf-slider" type="range" min="1" max="20" value="0"
-          name="How many physical office locations do you have?">
-        <div class="slider-value" id="selectValue3">0</div>
-        <a href="#" class="msf-next-btn msf-btn">Next</a>
-        <div class="btns-group">
-        </div>
-      </div>
-
-      <!-- question 4-->
-      <div class="form-step">
-        <h3 class="msf-heading">Do you currently use an outside IT support company?</h3>
-        <div class="radio-btn">
-          <label class="radio-btn-label">Yes
-            <input class="radio-btn-input" type="radio" name="Do you currently use an outside IT support company?"
-              value="yes">
-            <span class="checkmark"></span>
-          </label>
-        </div>
-        <div class="radio-btn">
-          <label class="radio-btn-label">No<input class="radio-btn-input" type="radio"
-              name="Do you currently use an outside IT support company?" value="no">
-            <span class="checkmark"></span>
-          </label>
-        </div>
-        <div class="btns-group">
-        </div>
-      </div>
-
-      <!-- question 5-->
-      <div class="form-step">
-        <h3 class="msf-heading">Do you need support outside of business hours?</h3>
-        <div class="radio-btn">
-          <label class="radio-btn-label">During working hours only<input class="radio-btn-input" type="radio"
-              name="Do you need support outside of business hours?" value="working-hours">
-            <span class="checkmark"></span>
-          </label>
-        </div>
-        <div class="radio-btn">
-          <label class="radio-btn-label">Also in the evening<input class="radio-btn-input" type="radio"
-              name="Do you need support outside of business hours?" value="evening">
-            <span class="checkmark"></span>
-          </label>
-        </div>
-        <div class="radio-btn">
-          <label class="radio-btn-label">Also during the weekend
-            <input class="radio-btn-input" type="radio" name="Do you need support outside of business hours?"
-              value="weekend">
-            <span class="checkmark"></span>
-          </label>
-        </div>
-        <div class="radio-btn">
-          <label class="radio-btn-label">24/7
-            <input class="radio-btn-input" type="radio" name="Do you need support outside of business hours?"
-              value="non-stop">
-            <span class="checkmark"></span>
-          </label>
-        </div>
-        <div class="btns-group">
-        </div>
-      </div>
-
-      <!-- question 6-->
-      <div class="form-step">
-        <h3 class="msf-heading">What email platform are you on?</h3>
-        <div class="radio-btn">
-          <label class="radio-btn-label">Microsoft<input class="radio-btn-input" type="radio"
-              name="What email platform are you on?" value="Microsoft">
-            <span class="checkmark"></span>
-          </label>
-        </div>
-        <div class="radio-btn">
-          <label class="radio-btn-label">Google Gsuit<input class="radio-btn-input" type="radio"
-              name="What email platform are you on?" value="Google">
-            <span class="checkmark"></span>
-          </label>
-        </div>
-        <div class="radio-btn">
-          <label class="radio-btn-label">Other
-            <input class="radio-btn-input" type="radio" name="What email platform are you on?" value="Other">
-            <span class="checkmark"></span>
-          </label>
-        </div>
-        <div class="btns-group">
-        </div>
-      </div>
-
-      <!-- question 7-->
-      <div class="form-step">
-        <h3 class="msf-heading">Does part of your team work remotely, full time or otherwise?</h3>
-        <div class="radio-btn">
-          <label class="radio-btn-label">Yes<input class="radio-btn-input" type="radio"
-              name="Does part of your team work remotely, full time or otherwise?" value="yes">
-            <span class="checkmark"></span>
-          </label>
-        </div>
-        <div class="radio-btn">
-          <label class="radio-btn-label">No<input class="radio-btn-input" type="radio"
-              name="Does part of your team work remotely, full time or otherwise?" value="no">
-            <span class="checkmark"></span>
-          </label>
-        </div>
-        <div class="btns-group">
-        </div>
-      </div>
-
-      <!-- question 8-->
-      <div class="form-step">
-        <h3 class="msf-heading">Do you struggle with any time-consuming internal processes or workflows?
-        </h3>
-        <div class="radio-btn">
-          <label class="radio-btn-label">Yes<input class="radio-btn-input" type="radio"
-              name="Do you struggle with any time-consuming internal processes or workflows?" value="yes">
-            <span class="checkmark"></span>
-          </label>
-        </div>
-        <div class="radio-btn">
-          <label class="radio-btn-label">No<input class="radio-btn-input" type="radio"
-              name="Do you struggle with any time-consuming internal processes or workflows?" value="no">
-            <span class="checkmark"></span>
-          </label>
-        </div>
-
-        <div class="btns-group">
-        </div>
-      </div>
-
-      <!-- question 9-->
-      <div class="form-step">
-        <h3 class="msf-heading">Is there anything else you would like to add?</h3>
-        <textarea class="msf-text-input" name="Is there anything else you would like to add?" rows="4">
-        </textarea>
-        <a href="#" class="msf-next-btn msf-btn">Next</a>
-        <div class="btns-group">
-        </div>
-      </div>
-
-      <!-- question 10-->
-      <div class="form-step">
-        <h3 class="msf-heading">Fill in your personal details</h3>
-        <input class="msf-text-input" type="text" placeholder="First name" name="first-name">
-        <input class="msf-text-input" type="text" placeholder="Last name" name="last-name">
-        <input class="msf-text-input" type="email" placeholder="Email" name="email" required>
-        <button type="submit" class="msf-btn">Submit</button>
-
-        <div class="btns-group">
-          <a href="#" class="msf-btn-prev">
-            <div class="arrow">
-              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
-                fill="currentcolor">
-                <path d="M0 0h24v24H0V0z" fill="none" opacity=".87" />
-                <path d="M17.51 3.87L15.73 2.1 5.84 12l9.9 9.9 1.77-1.77L9.38 12l8.13-8.13z" />
-              </svg>
-            </div>
-          </a>
-          <div class="form-step-counter"></div>
-          <div class="arrow inactive">
-            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24"
-              width="24px" fill="currentcolor">
-              <g>
-                <path d="M0,0h24v24H0V0z" fill="none" />
-              </g>
-              <g>
-                <polygon points="6.23,20.23 8,22 18,12 8,2 6.23,3.77 14.46,12" />
-              </g>
-            </svg>
           </div>
         </div>
-
-      </div>
-    </form>
-  </div>
-  <script src="/src/form.js"></script>
-</body>
-
+      </form>
+    </div>
+    <script src="./src/form.js"></script>
+  </body>
 </html>
